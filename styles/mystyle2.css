@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*{
+    font-family: 'Roboto Mono', monospace;
+    color: #EDF2F4;
+    font-size: 12px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*::selection{
+    color: rgba(206, 212, 218, 0.5);
+}
+
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+    background-color: #2b2d42;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #EDF2F4;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color:  #ef233c;
+}
+
+h1{
+    font-size: 28px;
+    font-weight: 300;
+    margin: 5px 0 5px 20px;
+    color: #EDF2F4;
+}
+
+h2{
+    font-size: 18px;
+    font-weight: 300;
+    margin: 5px 0 5px 20px;
+    color: #CED4DA;
+}
+
+h3{
+    font-size: 12px;
+    font-weight: 300;
+    margin: 5px 0 5px 20px;
+    color: rgb(237, 242, 244);
+}
+
+h4{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 5px 0 5px 0;
+    color: #ef233c;
+}
+
+ul{
+    display: none;
+}
+
+a{
+    color: #EDF2F4;
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+span{
+    font-size: 12px;
+    color: #ef233c;
+}
+
+ul{
+    display: none;
+}
+
+li{
+    display: none;
+}
+
+.container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.customButton{
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 15px 20px 15px 20px;
+    font-size: 12px;
+    color: #ef233c;
+    background-color: #2b2d42;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 2px solid #ef233c;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+.customButton:hover{
+    background-color: rgba(206, 212, 218, 0.1);
+}
+
+.actionButtonContainer{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+.floatingActionButton{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: #2b2d42;
+    border: 3px solid #ef233c;
+    color: #ef233c;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.floatingActionButton:hover{
+    color: rgb(239, 35, 60, 0.75);
+    border-color: rgb(239, 35, 60, 0.75);
+    transform: translate(0, 5px);
+}
+
+.wrapper{
+    margin: 0 auto !important;
+    width: 360px;
+}
+
+.appbar{
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    backdrop-filter: none;
+    background-color: #2b2d42;
+    height: 60px;
+    width: 100%;
+    z-index: 200;
+    transition: 0.4s;
+}
+
+.appbar span{
+    display: flex;
+    margin: 15px;
+}
+
+.menubackground{
+    display: none;
+    height: 200vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    height: 100vh;
+    width: 45vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2b2d42;
+    z-index: 300;
+    transition: 0.3s;
+}
+
+.menu a{
+    margin: 10px auto;
+    font-size: 20px;
+}
+.menu .customButton{
+    margin: 10px auto;
+}
+.menu-icon{
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.home{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.intro{
+    flex-wrap: wrap;
+    padding: 30px;
+    padding-bottom: 80px;
+}
+
+.greeting{
+    margin-left: 0px;
+    color: #ef233c;
+}
+
+.about{
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 300px;
+    transition: 0.4s;
+}
+
+.void{
+    color: rgba(237, 242, 244, 0.5); 
+    font-weight: 200; 
+    font-size: 14px;
+}
+
+.parenthesis{
+    color: rgba(237, 242, 244, 1); 
+    font-weight: 200; 
+    font-size: 14px;
+}
+
+.media-buttons{
+    display: none;
+}
+
+.reveal{
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.active{
+    opacity: 1;
+}
+
+.work{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 300px;
+    transition: 0.4s;
+}
+
+.listView{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: auto;
+    justify-content: space-evenly;
+}
+
+.listTile{
+    margin: 15px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardTile{
+    margin: 10px;
+    padding: 20px;
+    height: 100px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(237, 242, 244, 0.10);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: none;
+    text-align: start;
+    box-sizing: content-box;
+    cursor: pointer;
+    transition: 0.4s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.cardTile:hover{
+    background-color: rgba(237, 242, 244, 0.05);
+    transform: translate(0px, 5px);
+}
+
+.darkTag{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 50px;
+    margin: 0;
+    margin-left: 0;
+    color: rgba(237, 242, 244, 0.5);
+    font-size: 10px;
+}
+
+.titleCard{
+    margin: 0;
+    color: #EDF2F4;
+    height: 50px;
+    font-size: 12px;
+}
+
+.tileIcon{
+    color: #ef233c;
+    font-size: 12px;
+    margin: auto;
+    display: none;
+}
+
+.modal {
+    display: none; 
+    align-items: center;
+    position: fixed; 
+    z-index: 200; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.3); 
+    animation: fadeModal 0.2s ease-in
+  }
+
+.modal-content {
+    background-color: #2b2d42;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.modal-content-column{
+    display: flex; 
+    flex-direction: column;
+}
+
+.modal-content-column h4{
+    margin: 5px 0;
+}
+
+.modal-content-row{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.modal-buttons{
+    display: flex;
+    flex-direction: column;
+    width: 125px;
+    cursor: pointer;
+}
+
+.modal-buttons ion-icon{
+    margin: 5px auto;
+    color: #ef233c;
+    font-size: 30px;
+}
+
+.modal-buttons p{
+    text-align: center;
+    font-size: 11px;
+    color: #CED4DA;
+    margin: 5px 0;
+}
+
+.modal-content .darkTag{
+    font-size: 12px;
+}
+
+.contact{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 300px;
+    transition: 0.4s;
+}
+
+.image{
+    margin: 20px;
+    height: 180px;
+    width: 120px;
+    border: 2px solid #EDF2F4;
+    border-radius: 15px;
+}
+
+.media-buttons{
+    display: flex;
+}
+
+.media-buttons a{
+    color: #EDF2F4;
+    transition: 0.3s;
+    margin: 10px 30px;
+}
+
+.media-buttons ion-icon{
+    color: rgba(206, 212, 218, 0.8);
+    font-size: 25px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.media-buttons ion-icon:hover{
+    color: #EDF2F4;
+    transform: translate(0, -5px);
+}
+
+.mediaFloating{
+    display: none;
+}
+
+#message{
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+/* Mobile Landscape */
+@media screen and (orientation: landscape) {
+    .wrapper{
+        width: 780px;
+    }
+    .intro{
+        margin: auto;
+        padding: 0;
+    }
+    .about{
+        height: 150vh;
+        width: 720px;
+    }
+    .work{
+        height: 150vh;
+        width: 720px;
+    }
+    .cardTile{
+        justify-content: space-between;
+        width: 190px;
+        padding: 15px;
+    }
+    .titleCard{
+        height: auto;
+        font-size: 11px;
+    }
+    .tileIcon{
+        font-size: 25px;
+        display: flex;
+    }
+    .darkTag{
+        height: 24px;
+    }
+    .modal-content{
+        width: 300px;
+        height: 300px;
+    }
+    .contact{
+        height: 200vh;
+        width: 600px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .image{
+        margin-bottom: 5px;
+    }
+    .simplified{
+        width: 600px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 820px) {
+    .wrapper{
+        width: 420px;
+    }
+    .about{
+        width: 400px;
+    }
+    .work{
+        width: 420px;
+    }
+    *{
+        font-size: 14px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 14px;
+    }
+    h4{
+        font-size: 16px;
+    }
+    span{
+        font-size: 14px;
+    }
+    .void{
+        font-size: 16px;
+    }
+    .parenthesis{
+        font-size: 16px;
+    }
+    .menu a{
+        margin: 20px auto;
+    }
+    .cardTile{
+        height: 120px;
+    }
+    .modal-content{
+        width: 300px;
+        height: 350px;
+    }
+    .modal-content-column{
+        text-align: start;
+    }
+    .container{
+        text-align: center;
+    }
+}   
+
+/* Desktop */
+@media screen and (min-height: 720px) and (orientation: landscape) {
+    .wrapper{
+        width: 800px;
+    }
+    *{
+        font-size: 18px;
+    }
+    h1{
+        font-size: 58px;
+    }
+    h2{
+        font-size: 48px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    span{
+        font-size: 18px;
+    }
+    a{
+        font-size: 18px;
+    }
+    ul{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        list-style: none;
+    }
+    li{
+        display: flex;
+        align-items: center;
+        margin: 15px 30px;
+        transition: 0.3s;
+    }
+    
+    li:hover{
+        transform: translate(0, 5px);
+    }
+    
+    li a:hover{
+        color: #ef233c;
+    }
+    .appbar{
+        height: 80px;
+        background-color: rgba(43, 45, 66, 0.5);
+        backdrop-filter: blur(5px);
+        right: 0px;
+        top: 0px;
+        z-index: 100;
+    }
+    .appbar .customButton{
+        margin: 0; 
+        padding: 10px; 
+        font-size: 16px; 
+        width: 120px;
+    }
+    .appbar span{
+        display: none;
+    }
+    .customButton{
+        width: 180px;
+    }
+    .void{
+        font-size: 20px;
+    }
+    .parenthesis{
+        font-size: 20px;
+    }
+    .cardTile{
+        height: 28px;
+        height: 160px;
+    }
+    .titleCard{
+        font-size: 14px;
+    }
+    .darkTag{
+        font-size: 12px;
+    }
+    .modal-content{
+        height: 400px;
+        width: 400px;
+    }
+    .menubackground{
+        display: none;
+    }
+    .contact{
+        height: 100vh;
+        justify-content: center;
+    }
+    .media-buttons{
+        display: none;
+    }
+    .actionButtonContainer{
+        bottom: 30px;
+        right: 30px;
+    }
+    .floatingActionButton{
+        height: 30px;
+        width: 30px;
+    }
+    .mediaFloating{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        bottom: 30px;
+        left: 30px;
+    }
+    .mediaButton{
+        color: rgba(206, 212, 218, 0.5);
+        font-size: 30px;
+        margin: 15px 0;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    .mediaButton:hover{
+        color: #EDF2F4;
+        transform: translate(0, -5px);
+    }
+    .reveal{
+        transition: all 2s ease;
+    }
+    
+}

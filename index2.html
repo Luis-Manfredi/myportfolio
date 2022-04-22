@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/mystyle2.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <header class="appbar" id="appbar">
+        <ul>
+            <li>
+                <a href="assets/files/Luis Manfredi CV 2022.pdf" download>
+                    <button class="customButton">Resume</button>
+                </a> 
+            </li>
+            <li>
+                <a href=#contact>contact</a>
+            </li>
+            <li>
+                <a href=#work>work</a>
+            </li>
+            <li>
+                <a href=#about>about</a>
+            </li>
+        </ul>
+        <span onclick="openMenu()"><ion-icon name="menu-outline" class="menu-icon"></ion-icon></span>
+        <div class="menubackground" id="menu">
+            <div class="menu">
+                <a href="#about">about</a>
+                <a href="#work">work</a>
+                <a href="#contact">contact</a>
+                <a href="assets/files/Luis Manfredi Resume Updated 2022.pdf" download>
+                    <button class="customButton">Resume</button>
+                </a> 
+            </div>
+        </div>
+    </header>
+
+    <!-- main content -->
+    <main class="wrapper">
+        <section class="home" id="intro">
+            <div class="intro">
+                <h3 class="greeting">Hello there! My name is</h3>
+                <h1>Luis Manfredi</h1>
+                <h2>I build web and mobile apps</h2>
+                <h3>I'm a front-end developer</h3>
+                <a href="mailto:lsman2098@gmail.com">
+                    <button class="customButton"><span>Say Hello!</span></button>
+                </a>
+            </div>
+        </section>
+
+        <section class="about reveal" id="about">
+            <h4>
+                <span class="void">void</span>
+                about<span class="parenthesis">()</span> {
+            </h4>
+            <div class="aboutContainer">
+                <p style = "color: rgba(237, 242, 244, 0.5); margin: 10px 0;">'''</p>
+                <p>
+                    Hello! My Name is Luis Manfredi and I have a great passion for programming and design. My interest in programming started back in 2016 when I was studying networking in the university.
+                </p>
+                <p>
+                    I'm very curious and I like to learn new things on my own. I focus on creating the best interactive and user-friendly apps for customers. My goal is to become a full-stack developer. 
+                </p>
+                <p style="color: rgba(237, 242, 244, 0.5); margin: 10px 0;">'''</p>
+                <p>
+                    <span>myWorkTools</span> = [html, css, javascript, node, mongoDB, python, dart, flutter];
+                </p>
+            </div>
+            <h4>}</h4>
+        </section>
+
+        <section class="work reveal" id="work">
+            <h4>
+                myProjects<span class="parenthesis">();</span>
+            </h4>
+            <div class="container">
+                <div class="listView">
+                    <!-- Project 1 -->
+                    <button class="cardTile" data-modal="modal1">
+                        <p class="titleCard">Tempo</p>
+                        <ion-icon name="desktop-outline" class="tileIcon"></ion-icon>
+                        <p class="darkTag">HTML CSS JavaScript</p>
+                    </button> 
+
+                    <!-- Project 1 Modal -->
+                    <div class="modal" id="modal1">
+                        <div class="modal-content">
+                            <div class="modal-content-column">
+                                <h4>Tempo</h4>
+                                <p>A simple page of a fictional music stream app. One of my first projects.</p>
+                                <p class="darkTag" style="margin-top: 15px; height: 20px;">HTML CSS JavaScript</p>
+                            </div>
+                            <div class="modal-content-row">
+                                <a href="https://github.com/Luis-Manfredi/tempo_webpage" target="_blank" rel="noreferrer noopener">
+                                    <div class="modal-buttons">
+                                        <ion-icon name="logo-github"></ion-icon>
+                                        <p>Check the code</p>
+                                    </div>
+                                </a>
+                                <a href="https://luis-manfredi.github.io/tempo_webpage/" target="_blank" rel="noreferrer noopener">
+                                    <div class="modal-buttons">
+                                        <ion-icon name="link-outline"></ion-icon>
+                                        <p>Watch the demo</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <button class="cardTile" data-modal="modal2">
+                        <p class="titleCard">Horizons</p>
+                        <ion-icon name="desktop-outline" class="tileIcon"></ion-icon>
+                        <p class="darkTag">HTML CSS JavaScript</p>
+                    </button>
+
+                    <!-- Project 2 Modal -->
+                    <div class="modal" id="modal2">
+                        <div class="modal-content">
+                            <div class="modal-content-column">
+                                <h4>Horizons</h4>
+                                <p>Home page of a fictional insurance company. Here I started to use bootstrap in my designs.</p>
+                                <p class="darkTag" style="margin-top: 15px; height: 20px;">HTML CSS JavaScript Bootstrap</p>
+                            </div>
+                            <div class="modal-content-row">
+                                <a href="https://github.com/Luis-Manfredi/Horizons_project" target="_blank" rel="noreferrer noopener">
+                                    <div class="modal-buttons">
+                                        <ion-icon name="logo-github"></ion-icon>
+                                        <p>Check the code</p>
+                                    </div>
+                                </a>
+                                <a href="https://luis-manfredi.github.io/Horizons_project/" target="_blank" rel="noreferrer noopener">
+                                    <div class="modal-buttons">
+                                        <ion-icon name="link-outline"></ion-icon>
+                                        <p>Watch the demo</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <button class="cardTile" data-modal="modal3">
+                        <p class="titleCard">Tempo - SignUp/Login</p>
+                        <ion-icon name="desktop-outline" class="tileIcon"></ion-icon>
+                        <p class="darkTag">HTML CSS JavaScript Node Express.js</p>
+                    </button>
+
+                    <div class="modal" id="modal3">
+                        <div class="modal-content">
+                            <div class="modal-content-column">
+                                <h4>Tempo - SignUp/Login</h4>
+                                <p>Here I wanted to take a step forward and I started to manage data. I learned a lot while doing this project.</p>
+                                <p class="darkTag" style="margin-top: 15px; height: 20px;">HTML EJS CSS JavaScript Node Express.js</p>
+                            </div>
+                            <div class="modal-content-row">
+                                <a href="https://github.com/Luis-Manfredi/tempo_signup_test" target="_blank" rel="noreferrer noopener">
+                                    <div class="modal-buttons">
+                                        <ion-icon name="logo-github"></ion-icon>
+                                        <p>Check the code</p>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/Luis-Manfredi/tempo_signup_test" target="_blank" rel="noreferrer noopener">
+                                    <div class="modal-buttons">
+                                        <ion-icon name="link-outline"></ion-icon>
+                                        <p>Watch the demo</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="cardTile" data-modal="modal4">
+                        <p class="titleCard">GameViewer</p>
+                        <ion-icon name="phone-portrait-outline" class="tileIcon"></ion-icon>
+                        <p class="darkTag">Flutter Node Express.js MongoDB</p>
+                    </button>
+
+                    <div class="modal" id="modal4">
+                        <div class="modal-content">
+                            <div class="modal-content-column">
+                                <h4>GameViewer</h4>
+                                <p>This project focuses on obtaining the data of a user's favorite games that are in the database of a server.</p>
+                                <p class="darkTag" style="margin-top: 15px; height: 20px;">Flutter Node Express.js MongoDB</p>
+                            </div>
+                            <div class="modal-content-row">
+                                <a href="https://github.com/Luis-Manfredi/game-viewer" target="_blank" rel="noreferrer noopener">
+                                    <div class="modal-buttons">
+                                        <ion-icon name="logo-github"></ion-icon>
+                                        <p>Check the code</p>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/Luis-Manfredi/game-viewer" target="_blank" rel="noreferrer noopener">
+                                    <div class="modal-buttons">
+                                        <ion-icon name="link-outline"></ion-icon>
+                                        <p>Watch the demo</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <buton class="cardTile" data-modal="modal5">
+                        <p class="titleCard">Tempo Mobile - SignUp/Login</p>
+                        <ion-icon name="phone-portrait-outline" class="tileIcon"></ion-icon>
+                        <p class="darkTag">Flutter Node Express.js MongoDB</p>
+                    </buton>
+
+                    <div class="modal" id="modal5">
+                        <div class="modal-content">
+                            <div class="modal-content-column">
+                                <h4>Tempo Mobile - SignUp/Login</h4>
+                                <p>This is a mobile version of a previous project. This app sends and receives data to an API.</p>
+                                <p class="darkTag" style="margin-top: 15px; height: 20px;">Flutter Node Express.js MongoDB</p>
+                            </div>
+                            <div class="modal-content-row">
+                                <a href="https://github.com/Luis-Manfredi/Tempo_Flutter-Node" target="_blank" rel="noreferrer noopener">
+                                    <div class="modal-buttons">
+                                        <ion-icon name="logo-github"></ion-icon>
+                                        <p>Check the code</p>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/Luis-Manfredi/Tempo_Flutter-Node" target="_blank" rel="noreferrer noopener">
+                                    <div class="modal-buttons">
+                                        <ion-icon name="link-outline"></ion-icon>
+                                        <p>Watch the demo</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/Luis-Manfredi?tab=repositories" target="_blank" rel="noreferrer noopener">
+                        <button class="cardTile">
+                            <p class="darkTag" id="message">Check my repository for more projects!</p>
+                        </button>
+                    </a>    
+                </div>
+            </div>
+        </section>
+
+        <section class="contact reveal" id="contact">
+            <div class="container simplified">
+                <h4>
+                    myContact<span class="parenthesis">();</span>
+                </h4>
+                <p>Want to get in touch? Send me a message!</p>
+                <button class="customButton" style = "margin: 20px 0;"><a href="mailto:lsman2098@gmail.com"><span>Say Hello!</span></a></button>
+                <div class="media-buttons">
+                    <a href="https://github.com/Luis-Manfredi?tab=repositories" target="_blank" rel="noreferrer noopener">
+                        <ion-icon name="logo-github" class="mediaButton"></ion-icon>
+                    </a>
+                    <a href="https://www.linkedin.com/in/luis-manfredi-zambrano" target="_blank" rel="noreferrer noopener">
+                        <ion-icon name="logo-linkedin" class="mediaButton"></ion-icon>
+                    </a>
+                    <a href="https://twitter.com/Itsmanfre" target="_blank" rel="noreferrer noopener">
+                        <ion-icon name="logo-twitter" class="mediaButton"></ion-icon>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <img src="assets/images/manfre_resized.jpg" alt="me" class="image">
+                <p style = "margin: 10px 0 5px 0; text-align: center; font-size: 14px;">I'm always looking for a challenge!</p>
+                <p style = "color: rgba(237, 242, 244, 0.5); margin: 5px 0 5px 0; text-align: center; font-size: 14px;">Luis Manfredi, front-end developer.</p>
+            </div>
+           
+        </section>
+    </main>
+
+    <!-- Floating buttons -->
+
+    <div class="actionButtonContainer">
+        <a href=#intro><ion-icon name="arrow-up-outline" class="floatingActionButton"></ion-icon></a>
+    </div>
+
+    <div class="mediaFloating">
+        <a href="https://github.com/Luis-Manfredi?tab=repositories" target="_blank" rel="noreferrer noopener">
+            <ion-icon name="logo-github" class="mediaButton"></ion-icon>
+        </a>
+        <a href="https://www.linkedin.com/in/luis-manfredi-zambrano" target="_blank" rel="noreferrer noopener">
+            <ion-icon name="logo-linkedin" class="mediaButton"></ion-icon>
+        </a>
+        <a href="https://twitter.com/Itsmanfre" target="_blank" rel="noreferrer noopener">
+            <ion-icon name="logo-twitter" class="mediaButton"></ion-icon>
+        </a>
+    </div>
+
+    <!-- scripts -->
+    <script src="js/modalbox.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sidebar.js"></script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
