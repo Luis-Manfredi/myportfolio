@@ -481,14 +481,14 @@ li{
     .contact{
         height: 200vh;
         width: 600px;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-evenly;
     }
     .image{
         margin-bottom: 5px;
     }
     .simplified{
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 
