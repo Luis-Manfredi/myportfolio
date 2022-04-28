@@ -488,7 +488,7 @@ li{
         margin-bottom: 5px;
     }
     .simplified{
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
